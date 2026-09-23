@@ -12,5 +12,6 @@ Coda 文件引用的公開圖檔。只放不含個資的示意圖／地圖。
 | `karuizawa_north_vs_south.png` | 1/30 輕井澤站 北口（草軽巴士）vs 南口（PALCALL 接駁） |
 | `kusatsu_pickup_map.png` | 1/31 草津 一井↔巴士總站↔温泉門，含 5 個候選上車點 |
 | `tokyo_transfer_map.png` | 2/4 東京駅 新幹線 2F → N'EX B5 |
+| `karuizawa_south_to_psp.png` | 2/4 輕井澤站南口 → Prince Shopping Plaza（步行路線） |
 
 底圖為 OpenStreetMap contributors；標註為自行加上。
