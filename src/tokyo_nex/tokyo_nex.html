@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>東京駅 新幹線→N'EX</title>
+<style>
+@font-face { font-family: "NotoTC"; src: url("file:///C:/Windows/Fonts/NotoSansTC-VF.ttf"); font-weight: 100 900; }
+:root {
+  --go: #1e8a3c; --go-dk: #146b2c; --no: #d32f2f; --start: #1565c0; --mid: #ef6c00; --ev: #3f51b5;
+  --ink: #1d2327; --sub: #5b646b; --line: #c9ced3; --bg: #ffffff;
+  --check: #b26a00; --check-bg: #fff4e0;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { width: 640px; background: var(--bg); color: var(--ink); font-family: "NotoTC", "Microsoft JhengHei", sans-serif; }
+.wrap { padding: 22px 20px 22px; }
+h1 { font-size: 33px; font-weight: 900; line-height: 1.2; }
+h1 .arr { color: var(--go); }
+.lead { font-size: 20px; color: var(--sub); margin-top: 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.chip { font-size: 20px; font-weight: 700; padding: 4px 12px; border-radius: 8px; background: #eef1f3; }
+.chip.go { background: var(--go); color: #fff; }
+.chip.warn { background: var(--no); color: #fff; }
+.tt { margin-top: 14px; border: 2px solid #d5d9dd; border-radius: 12px; padding: 10px 14px; }
+.tt .h { font-size: 18px; font-weight: 800; color: var(--sub); }
+.tt .r { font-size: 20px; margin-top: 4px; line-height: 1.45; }
+.tt .r b { font-weight: 900; }
+.tt .n { font-size: 15px; color: var(--sub); margin-top: 4px; line-height: 1.45; }
+.panel { margin-top: 20px; border-top: 3px solid var(--ink); padding-top: 10px; }
+.ph { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.ph b { font-size: 26px; font-weight: 900; white-space: nowrap; }
+.ph span { font-size: 17px; color: var(--sub); }
+svg { display: block; margin-top: 8px; }
+svg text { font-family: "NotoTC", "Microsoft JhengHei", sans-serif; }
+.step { margin-top: 12px; border: 2px solid #d5d9dd; border-radius: 12px; overflow: hidden; background: #fff; }
+.step svg { margin-top: 0; }
+.ch { display: flex; gap: 12px; align-items: flex-start; padding: 10px 12px; }
+.ch .num { flex: none; width: 40px; height: 40px; border-radius: 50%; color: #fff; font-size: 22px; font-weight: 900; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+.ch b { display: block; font-size: 25px; font-weight: 900; line-height: 1.25; }
+.ch span { display: block; font-size: 18px; color: var(--sub); line-height: 1.4; margin-top: 2px; }
+.ch .no { color: var(--no); font-weight: 800; }
+.ch .ev { color: var(--ev); font-weight: 700; }
+.cr { font-size: 15px; color: var(--sub); padding: 6px 12px 8px; line-height: 1.45; }
+.ph0 { margin: 0 12px 12px; border: 3px dashed #9aa2a8; border-radius: 10px; padding: 10px 14px; font-size: 18px; line-height: 1.5; background: #f6f7f8; }
+.ph0 .t { font-size: 20px; font-weight: 900; color: #6b747b; }
+.ph0 .s { font-size: 15px; color: var(--sub); margin-top: 2px; }
+.check { margin-top: 18px; background: var(--check-bg); border-left: 6px solid var(--check); padding: 10px 14px; font-size: 18px; line-height: 1.55; }
+.check b { color: var(--check); }
+.src { margin-top: 12px; font-size: 15px; color: var(--sub); line-height: 1.5; }
+.lic { margin-top: 10px; padding-top: 10px; border-top: 1px solid #d5d9dd; font-size: 15px; color: var(--sub); line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="wrap" id="p1">
+
+<h1>新幹線 <span class="arr">→</span> N'EX 成田特快</h1>
+<div class="lead">2/4 東京駅・全程在站內，不出閘門</div>
+<div class="chips">
+  <span class="chip">2F → B5（往下 6 層）</span>
+  <span class="chip">轉乘抓 20 分</span>
+  <span class="chip go">N'EX 在 B5・4 番線</span>
+</div>
+
+<div class="tt">
+  <div class="h">班次參考（平日・2026 年 10 月版時刻表）</div>
+  <div class="r"><span class="chip go" style="font-size:16px;padding:1px 8px">主班</span> あさま620　輕井澤 15:00 → <b>東京 16:12</b>（21 番線）<br>→ N'EX 41 號　<b>16:33</b> 發 → 機場第 2 航廈 17:25・全日</div>
+  <div class="r"><span class="chip warn" style="font-size:16px;padding:1px 8px">最晚備案</span> あさま622　輕井澤 15:56 → <b>東京 17:12</b>（23 番線）<br>→ N'EX 45 號　<b>17:33</b> 發 → 機場第 2 航廈 18:25・全日</div>
+  <div class="n">622 到 T2 18:25，離 19:10 報到截止只剩 45 分。<br>あさま644（15:35）是臨時列車，2027/2 是否開行未知。<br>冬季時刻表可能改點，出發前重查。N'EX 全車對號，要先有座位。</div>
+</div>
+
+<!-- ============ 總覽：樓層剖面 ============ -->
+<div class="panel">
+  <div class="ph"><b>全程樓層</b><span>側面剖面・不照比例</span></div>
+  <svg width="600" height="640" viewBox="0 0 600 640">
+    <defs>
+      <marker id="hd" viewBox="0 0 10 10" refX="4" refY="5" markerUnits="userSpaceOnUse" markerWidth="26" markerHeight="26" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--go-dk)"/></marker>
+    </defs>
+    <!-- 東西方位 -->
+    <g font-size="17" fill="var(--sub)">
+      <text x="64" y="20">← 丸の内側（西）</text>
+      <text x="600" y="20" text-anchor="end">八重洲側（東）→</text>
+    </g>
+    <!-- 樓層線 -->
+    <g stroke="var(--line)" stroke-width="2" stroke-dasharray="4 6">
+      <line x1="58" y1="80" x2="600" y2="80"/>
+      <line x1="58" y1="210" x2="600" y2="210"/>
+      <line x1="58" y1="340" x2="600" y2="340"/>
+      <line x1="58" y1="480" x2="600" y2="480"/>
+      <line x1="58" y1="585" x2="600" y2="585"/>
+    </g>
+    <g font-size="24" font-weight="900" fill="var(--sub)">
+      <text x="0" y="88">2F</text>
+      <text x="0" y="218">1F</text>
+      <text x="0" y="348">B1</text>
+      <text x="0" y="488">B4</text>
+      <text x="0" y="593">B5</text>
+    </g>
+    <text x="0" y="404" font-size="15" fill="#9aa2a8">B2・B3</text>
+    <text x="0" y="422" font-size="15" fill="#9aa2a8">省略</text>
+
+    <!-- 新幹線月台 -->
+    <rect x="400" y="84" width="200" height="22" rx="4" fill="#d9e7f7"/>
+    <text x="500" y="101" font-size="16" text-anchor="middle" fill="var(--start)" font-weight="700">新幹線 20～23 番線</text>
+
+
+    <!-- ✕ 1F 丸の内中央口 -->
+    <rect x="58" y="226" width="118" height="58" rx="8" fill="#fff" stroke="var(--no)" stroke-width="3"/>
+    <g stroke="var(--no)" stroke-width="4" stroke-linecap="round"><path d="M68 236 l14 14 M82 236 l-14 14"/></g>
+    <text x="88" y="249" font-size="17" font-weight="900" fill="var(--no)">不要出閘</text>
+    <text x="66" y="274" font-size="15" fill="var(--no)">丸の内中央口</text>
+    <!-- ✕ B1 丸の内地下中央口 -->
+    <rect x="300" y="356" width="150" height="58" rx="8" fill="#fff" stroke="var(--no)" stroke-width="3"/>
+    <g stroke="var(--no)" stroke-width="4" stroke-linecap="round"><path d="M310 366 l14 14 M324 366 l-14 14"/></g>
+    <text x="330" y="379" font-size="17" font-weight="900" fill="var(--no)">不要出閘</text>
+    <text x="308" y="404" font-size="15" fill="var(--no)">丸の内地下中央口</text>
+
+    <!-- 路線 -->
+    <path d="M520 124 V210 H200 V340 H250 V480 H330 V585 H470" fill="none" stroke="#fff" stroke-width="18" stroke-linejoin="round"/>
+    <path d="M520 124 V210 H200 V340 H250 V480 H330 V585 H452" fill="none" stroke="var(--go)" stroke-width="11" stroke-linejoin="round" marker-end="url(#hd)"/>
+    <!-- 路上方向小箭頭 -->
+    <g fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M396 203 l-7 7 l7 7"/><path d="M300 203 l-7 7 l7 7"/>
+      <path d="M193 270 l7 7 l7 -7"/><path d="M243 404 l7 7 l7 -7"/><path d="M243 440 l7 7 l7 -7"/><path d="M323 530 l7 7 l7 -7"/>
+    </g>
+
+    <!-- 中央通路 說明 -->
+    <text x="360" y="186" font-size="21" font-weight="800" fill="var(--ink)" text-anchor="middle">中央通路 直走到底</text>
+    <text x="360" y="244" font-size="16" fill="var(--sub)" text-anchor="middle">兩側依序經過 10 → 1 番線樓梯</text>
+
+    <!-- 各段下樓方式（電梯＝有行李優先） -->
+    <g font-size="16">
+      <text x="532" y="152" fill="var(--ink)" font-weight="700">電扶梯</text>
+      <text x="532" y="172" fill="var(--ev)" font-weight="700">電梯</text>
+      <text x="212" y="272" fill="var(--ink)" font-weight="700">右手邊下樓</text>
+      <text x="212" y="292" fill="var(--ev)" font-weight="700">樓梯旁有電梯</text>
+      <text x="262" y="440" fill="var(--ink)" font-weight="700">下長電扶梯</text>
+      <text x="262" y="460" fill="var(--ev)" font-weight="700">電梯 P・Q 按 B4</text>
+      <text x="342" y="524" fill="var(--ink)" font-weight="700">跟「3・4」下樓</text>
+      <text x="342" y="544" fill="var(--ev)" font-weight="700">電梯 R</text>
+    </g>
+
+    <!-- 節點 -->
+    <g font-size="20" font-weight="800" fill="#fff" text-anchor="middle">
+      <circle cx="520" cy="124" r="17" fill="var(--start)" stroke="#fff" stroke-width="3"/><text x="520" y="131">1</text>
+      <circle cx="520" cy="210" r="17" fill="var(--mid)" stroke="#fff" stroke-width="3"/><text x="520" y="217">2</text>
+      <circle cx="200" cy="210" r="17" fill="var(--mid)" stroke="#fff" stroke-width="3"/><text x="200" y="217">3</text>
+      <circle cx="250" cy="340" r="17" fill="var(--mid)" stroke="#fff" stroke-width="3"/><text x="250" y="347">4</text>
+      <circle cx="330" cy="480" r="17" fill="var(--mid)" stroke="#fff" stroke-width="3"/><text x="330" y="487">5</text>
+    </g>
+    <text x="498" y="150" font-size="16" fill="var(--start)" font-weight="700" text-anchor="end">下車</text>
+    <text x="552" y="244" font-size="16" fill="var(--ink)" font-weight="700" text-anchor="middle">のりかえ口</text>
+    <text x="236" y="384" font-size="16" fill="var(--ink)" font-weight="700" text-anchor="end">找紅色</text>
+    <text x="236" y="404" font-size="16" fill="var(--ink)" font-weight="700" text-anchor="end">N'EX 看板</text>
+    <text x="150" y="510" font-size="16" fill="var(--ink)" font-weight="700">地板紅色 N'EX 箭頭</text>
+    <!-- 終點 -->
+    <g transform="translate(470 585)"><circle r="12" fill="var(--go-dk)"/><circle r="5" fill="#fff"/></g>
+    <rect x="340" y="598" width="260" height="40" rx="8" fill="var(--go-dk)"/>
+    <text x="356" y="626" font-size="22" font-weight="900" fill="#fff">6　4 番線 N'EX</text>
+  </svg>
+</div>
+
+<div class="check">
+  <b>需要確認</b><br>
+  ・N'EX 幾號車停在電扶梯／電梯 R 附近（12 節很長）：到月台先看地上號車標示<br>
+  ・過のりかえ口時要插哪幾張票，依實際買的票而定<br>
+  ・冬季時刻表的到站月台與班次
+</div>
+<div class="src">
+  站內路線依 JR 東日本東京駅構內圖（2026 年 9 月版）的空間關係自行重畫；JR 網站條款禁止轉載原圖。班次依 JR 東日本時刻表（2026 年 10 月版・平日）。走法另以 YouTube 實拍影片比對。
+</div>
+<div class="lic">本圖以 CC BY-SA 4.0 釋出；逐步照片見（2/2）。</div>
+</div>
+
+<div class="wrap" id="p2">
+<div class="lead" style="margin-top:0;font-weight:800">東京駅轉乘（2/2）：逐步確認，照編號走</div>
+<!-- ============ 步驟 ============ -->
+<div class="panel" style="margin-top:10px">
+  <div class="ph"><b>逐步確認</b><span>藍字＝有行李走這條</span></div>
+
+  <div class="step">
+    <div class="ch"><span class="num" style="background:var(--start)">1</span><div><b>2F 新幹線月台 下車</b><span>跟「のりかえ口」指標下 1F</span><span class="ev">電梯：20・21 番線是 I（靠南）、J（靠北）</span><span class="ev">　　　22・23 番線是 K（靠南）、L（靠北）</span></div></div>
+  </div>
+
+  <div class="step">
+    <div class="ch"><span class="num" style="background:var(--mid)">2</span><div><b>過新幹線「南／北のりかえ口」</b><span>出閘跟「中央通路」「丸の内」指標</span><span>坐 1～7 號車 → 南口較近</span></div></div>
+  </div>
+
+  <div class="step">
+    <div class="ch"><span class="num" style="background:var(--mid)">3</span><div><b>中央通路走到底，右手邊下樓</b><span>正前方的「丸の内中央口」閘門 <span class="no" style="display:inline">✕ 不要出</span></span><span class="ev">樓梯・電扶梯旁有電梯（1F ⇄ B1）</span></div></div>
+    <div class="ph0">
+      <div class="t">缺少照片</div>
+      <div>要找：丸の内中央口閘門右側、往 B1 的「中央通路階段」</div>
+      <div class="s">出處：JR 東日本東京駅構內圖 1F／B1（2026/9）；MIRU tube 影片 16:00～17:05 走的就是這裡。</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="ch"><span class="num" style="background:var(--mid)">4</span><div><b>B1：找紅色「成田エクスプレス」看板</b><span>在看板下搭長電扶梯到 B4</span><span class="no">看到「丸の内地下中央口」閘門＝走過頭</span><span class="ev">電梯 P・Q 只按 B4（坐到 B5 會到 1・2 番線那座月台）</span></div></div>
+    <div class="ph0">
+      <div class="t">缺少照片</div>
+      <div>要找：紅底白字「成田エクスプレス（成田空港方面）」看板，旁邊有投幣置物櫃</div>
+      <div class="s">出處：MIRU tube 影片 17:50、19:30 拍到這塊看板；電梯位置依 JR 構內圖 B1（2026/9）。</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="ch"><span class="num" style="background:var(--mid)">5</span><div><b>B4：跟「3・4」和地板紅色箭頭</b><span>下樓梯或電扶梯到 B5</span><span class="ev">電梯 R：B4 → B5（3・4 番線月台）</span></div></div>
+    <svg width="600" height="300" viewBox="0 0 600 300">
+      <image href="photos/crop_b4_passage.jpg" x="0" y="0" width="600" height="300"/>
+      <rect x="50" y="60" width="62" height="48" rx="6" fill="none" stroke="#fff" stroke-width="7"/>
+      <rect x="50" y="60" width="62" height="48" rx="6" fill="none" stroke="var(--go)" stroke-width="4"/>
+      <rect x="378" y="222" width="104" height="33" rx="6" fill="none" stroke="#fff" stroke-width="7"/>
+      <rect x="378" y="222" width="104" height="33" rx="6" fill="none" stroke="var(--go)" stroke-width="4"/>
+    </svg>
+    <div class="cr">照片：MaedaAkihiko / CC BY-SA 4.0 / Wikimedia Commons・已裁切加註・2021/11 拍攝（B4 通道）</div>
+  </div>
+
+  <div class="step">
+    <div class="ch"><span class="num" style="background:var(--go-dk)">6</span><div><b>B5：4 番線上 N'EX</b><span>看板「4番線からの発車は →」寫成田空港</span><span>4 番線也停快速，認車身再上；照票面號車排隊</span></div></div>
+    <svg width="600" height="278" viewBox="0 0 600 278">
+      <image href="photos/crop_b5_track4.jpg" x="0" y="0" width="600" height="278"/>
+      <rect x="270" y="20" width="166" height="50" rx="6" fill="none" stroke="#fff" stroke-width="7"/>
+      <rect x="270" y="20" width="166" height="50" rx="6" fill="none" stroke="var(--go)" stroke-width="4"/>
+    </svg>
+    <div class="cr">照片：MaedaAkihiko / CC BY-SA 4.0 / Wikimedia Commons・已裁切加註・2021/7 拍攝</div>
+    <svg width="600" height="144" viewBox="0 0 600 144">
+      <image href="photos/crop_nex_train.jpg" x="0" y="0" width="600" height="144"/>
+    </svg>
+    <div class="cr">N'EX 長這樣：白車身、上緣紅色、黑色窗帶（E259 系）。照片：Aspere / CC0 / Wikimedia Commons・已裁切・2025/8 拍攝</div>
+  </div>
+</div>
+
+<div class="src">
+  站內路線依 JR 東日本東京駅構內圖（2026 年 9 月版）的空間關係自行重畫；JR 網站條款禁止轉載原圖。
+</div>
+<div class="lic">本圖以 CC BY-SA 4.0 釋出；照片作者與授權見各照片下方。</div>
+
+</div>
+</body>
+</html>

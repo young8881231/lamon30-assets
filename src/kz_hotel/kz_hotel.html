@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>輕井澤站到羅索飯店</title>
+<style>
+@font-face { font-family: "NotoTC"; src: url("file:///C:/Windows/Fonts/NotoSansTC-VF.ttf"); font-weight: 100 900; }
+:root {
+  --go: #1e8a3c; --go-dk: #146b2c; --no: #d32f2f; --start: #1565c0; --mid: #ef6c00;
+  --ink: #1d2327; --sub: #5b646b; --road: #d8dce0; --road2: #c3c9ce; --bldg: #eceef0; --bg: #ffffff;
+  --check: #b26a00; --check-bg: #fff4e0; --corr: #fbf3d5;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { width: 640px; background: var(--bg); color: var(--ink); font-family: "NotoTC", "Microsoft JhengHei", sans-serif; }
+.wrap { padding: 22px 20px 20px; }
+h1 { font-size: 34px; font-weight: 900; line-height: 1.2; letter-spacing: .5px; }
+h1 .arr { color: var(--go); }
+.when { font-size: 20px; font-weight: 700; color: var(--sub); margin-top: 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.chip { font-size: 20px; font-weight: 700; padding: 4px 12px; border-radius: 8px; background: #eef1f3; }
+.chip.warn { background: var(--no); color: #fff; }
+.panel { margin-top: 20px; border-top: 3px solid var(--ink); padding-top: 10px; }
+.ph { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.ph b { font-size: 26px; font-weight: 900; white-space: nowrap; }
+.ph span { font-size: 18px; color: var(--sub); }
+svg { display: block; margin-top: 8px; }
+svg text { font-family: "NotoTC", "Microsoft JhengHei", sans-serif; }
+.steps { margin-top: 12px; }
+.st { display: flex; gap: 12px; align-items: flex-start; padding: 7px 0; border-bottom: 1px solid #e4e7ea; }
+.st .num { flex: none; width: 36px; height: 36px; border-radius: 50%; color: #fff; font-size: 20px; font-weight: 900; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+.st b { display: block; font-size: 23px; font-weight: 900; line-height: 1.3; }
+.st span { display: block; font-size: 17px; color: var(--sub); line-height: 1.4; }
+.check { margin-top: 18px; background: var(--check-bg); border-left: 6px solid var(--check); padding: 10px 14px; font-size: 18px; line-height: 1.55; }
+.check b { color: var(--check); }
+.winter { margin-top: 14px; background: #eaf2fb; border-left: 6px solid var(--start); padding: 10px 14px; font-size: 18px; line-height: 1.55; }
+.winter b { color: var(--start); }
+.card { margin-top: 14px; border: 2px solid #d5d9dd; border-radius: 12px; overflow: hidden; background: #fff; }
+.card svg { margin-top: 0; }
+.ch { display: flex; gap: 12px; align-items: center; padding: 10px 12px; }
+.ch b { display: block; font-size: 24px; font-weight: 900; line-height: 1.25; }
+.ch span { display: block; font-size: 17px; color: var(--sub); line-height: 1.35; }
+.ch .num { flex: none; width: 40px; height: 40px; border-radius: 50%; color: #fff; font-size: 22px; font-weight: 900; display: flex !important; align-items: center; justify-content: center; }
+.cr { font-size: 15px; color: var(--sub); padding: 6px 12px 8px; line-height: 1.45; }
+.miss .ph0 { margin: 0 12px 12px; border: 3px dashed #9aa2a8; border-radius: 10px; padding: 12px 14px; font-size: 18px; line-height: 1.5; background: #f6f7f8; }
+.miss .t { font-size: 21px; font-weight: 900; color: #6b747b; }
+.miss .s { font-size: 15px; color: var(--sub); margin-top: 4px; }
+.phh { margin-top: 20px; font-size: 20px; font-weight: 900; color: var(--sub); }
+.lic { margin-top: 14px; padding-top: 10px; border-top: 1px solid #d5d9dd; font-size: 15px; color: var(--sub); line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>軽井沢駅 <span class="arr">→</span> 羅索飯店</h1>
+<div class="when">1/29 約 23:19 到站・走<b style="color:var(--go-dk)">北口</b></div>
+<div class="chips">
+  <span class="chip">約 550 m</span>
+  <span class="chip">拖行李抓 12 分</span>
+  <span class="chip">天黑・路面可能結冰</span>
+  <span class="chip warn">前台只到 23:00</span>
+</div>
+
+<!-- ============ ① 站內 3F ============ -->
+<div class="panel">
+  <div class="ph"><b>站內：步驟 1–2</b><span>3 樓俯視・上方＝北・依 JR 構內圖重畫</span></div>
+  <svg width="600" height="460" viewBox="0 0 600 460">
+    <defs>
+      <marker id="hd1" viewBox="0 0 10 10" refX="4" refY="5" markerUnits="userSpaceOnUse" markerWidth="26" markerHeight="26" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--go)"/></marker>
+    </defs>
+    <rect x="0" y="0" width="600" height="460" rx="14" fill="#f6f7f8"/>
+    <!-- 南北自由通路 -->
+    <rect x="262" y="70" width="96" height="330" fill="var(--corr)" stroke="#d9cfa8" stroke-width="2"/>
+    <text x="338" y="310" font-size="16" fill="#8a7a3c" text-anchor="middle" style="writing-mode: vertical-rl">自由通路</text>
+    <!-- 新幹線改札（改札內） -->
+    <rect x="60" y="232" width="202" height="112" rx="8" fill="#f7d9e6" stroke="#d9a8bf" stroke-width="2"/>
+    <text x="76" y="266" font-size="21" font-weight="900" fill="var(--ink)">新幹線改札</text>
+    <text x="76" y="290" font-size="16" fill="var(--sub)">只有這一個</text>
+    <text x="76" y="330" font-size="16" fill="var(--sub)">↓ 月台在 1 樓</text>
+    <g fill="#90a4ae"><rect x="250" y="252" width="10" height="22" rx="3"/><rect x="250" y="282" width="10" height="22" rx="3"/><rect x="250" y="312" width="10" height="22" rx="3"/></g>
+
+    <!-- 北口玻璃門（不出去） -->
+    <rect x="262" y="22" width="96" height="16" fill="#9fb3c2"/>
+    <text x="310" y="17" font-size="17" fill="var(--sub)" text-anchor="middle">北口 3F 大門</text>
+    <rect x="378" y="10" width="206" height="54" rx="8" fill="#fff" stroke="var(--no)" stroke-width="4"/>
+    <g stroke="var(--no)" stroke-width="5" stroke-linecap="round"><path d="M390 24 l18 20 M408 24 l-18 20"/></g>
+    <text x="416" y="36" font-size="19" font-weight="900" fill="var(--no)">別出這扇門</text>
+    <text x="416" y="56" font-size="15" fill="var(--no)">外面是天橋＋戶外樓梯</text>
+    <path d="M358 32 H378" stroke="var(--no)" stroke-width="3"/>
+
+    <!-- 電扶梯（右）/ 電梯（左） -->
+    <rect x="378" y="92" width="160" height="72" rx="10" fill="var(--go)"/>
+    <text x="392" y="124" font-size="24" font-weight="900" fill="#fff">電扶梯 ↓</text>
+    <text x="392" y="151" font-size="17" font-weight="700" fill="#fff">大門前右手・到 1F</text>
+    <path d="M358 128 H378" stroke="var(--go)" stroke-width="4"/>
+    <rect x="96" y="96" width="150" height="64" rx="10" fill="#fff" stroke="var(--go-dk)" stroke-width="4"/>
+    <text x="110" y="124" font-size="21" font-weight="900" fill="var(--go-dk)">電梯 ↓</text>
+    <text x="110" y="148" font-size="16" fill="var(--go-dk)">左手・到 1F</text>
+    <path d="M246 128 H262" stroke="var(--go-dk)" stroke-width="4"/>
+
+    <!-- 南口（不是這邊） -->
+    <text x="310" y="428" font-size="20" font-weight="800" fill="var(--no)" text-anchor="middle">✕ 南口不是這邊</text>
+    <path d="M310 400 V408" stroke="var(--no)" stroke-width="3"/>
+
+    <!-- 路線 -->
+    <path d="M220 292 H300 V128 H360" fill="none" stroke="#fff" stroke-width="20" stroke-linejoin="round"/>
+    <path d="M220 292 H300 V128 H360" fill="none" stroke="var(--go)" stroke-width="12" stroke-linejoin="round" marker-end="url(#hd1)"/>
+    <g fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M293 222 l7 -7 l7 7"/></g>
+    <text x="376" y="228" font-size="22" font-weight="800" fill="var(--mid)">出閘左轉</text>
+    <text x="376" y="254" font-size="17" fill="var(--sub)">往北直走</text>
+    <text x="376" y="276" font-size="17" fill="var(--sub)">約 50 m</text>
+
+    <g font-size="20" font-weight="800" fill="#fff" text-anchor="middle">
+      <circle cx="232" cy="292" r="17" fill="var(--start)" stroke="#fff" stroke-width="3"/><text x="232" y="299">1</text>
+      <circle cx="300" cy="128" r="17" fill="var(--mid)" stroke="#fff" stroke-width="3"/><text x="300" y="135">2</text>
+    </g>
+  </svg>
+</div>
+
+<!-- ============ ② 地面 ============ -->
+<div class="panel">
+  <div class="ph"><b>地面：步驟 3–6</b><span>上方＝北・不照比例</span></div>
+  <svg width="600" height="620" viewBox="0 0 600 620">
+    <defs>
+      <marker id="hd2" viewBox="0 0 10 10" refX="4" refY="5" markerUnits="userSpaceOnUse" markerWidth="26" markerHeight="26" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--go)"/></marker>
+    </defs>
+    <!-- 本通り（往北，淡） -->
+    <rect x="456" y="0" width="40" height="232" fill="var(--road)"/>
+    <text x="520" y="30" font-size="16" fill="#9aa2a8" style="writing-mode: vertical-rl">往旧軽井沢・不走</text>
+    <!-- 巷子 -->
+    <rect x="116" y="18" width="28" height="214" fill="var(--road)"/>
+    <!-- 國道18號 -->
+    <rect x="0" y="232" width="600" height="40" fill="var(--road2)"/>
+    <line x1="0" y1="252" x2="600" y2="252" stroke="#fff" stroke-width="2" stroke-dasharray="14 12"/>
+    <text x="300" y="259" font-size="19" font-weight="800" fill="#4a535a" text-anchor="middle">國道18號</text>
+    <!-- 本通り（車站到18號） -->
+    <rect x="456" y="272" width="40" height="120" fill="var(--road)"/>
+    <!-- 圓環 -->
+    <circle cx="476" cy="428" r="46" fill="var(--road)"/>
+    <circle cx="476" cy="428" r="24" fill="#dfe8d8"/>
+    <text x="476" y="434" font-size="14" fill="var(--sub)" text-anchor="middle">圓環</text>
+    <!-- 車站 -->
+    <rect x="330" y="480" width="270" height="62" fill="var(--bldg)" stroke="#cfd4d8" stroke-width="2"/>
+    <text x="350" y="518" font-size="22" font-weight="800" fill="var(--sub)">軽井沢駅</text>
+    <g stroke="#b7bec4" stroke-width="3"><line x1="300" y1="560" x2="600" y2="560"/><line x1="300" y1="578" x2="600" y2="578"/><line x1="300" y1="596" x2="600" y2="596"/></g>
+    <text x="300" y="614" font-size="14" fill="#9aa2a8">鐵路</text>
+
+    <!-- ローソン -->
+    <rect x="40" y="178" width="72" height="48" rx="4" fill="#dde3f2" stroke="#8ea0c8" stroke-width="2"/>
+    <text x="76" y="200" font-size="15" font-weight="800" fill="#2d4a8a" text-anchor="middle">ローソン</text>
+    <text x="76" y="218" font-size="13" fill="#2d4a8a" text-anchor="middle">23:00 關</text>
+    <!-- 飯店 -->
+    <rect x="22" y="96" width="90" height="72" rx="4" fill="#fff" stroke="var(--go-dk)" stroke-width="4"/>
+    <text x="67" y="128" font-size="18" font-weight="900" fill="var(--go-dk)" text-anchor="middle">羅索</text>
+    <text x="67" y="150" font-size="18" font-weight="900" fill="var(--go-dk)" text-anchor="middle">飯店</text>
+    <!-- 停車場 -->
+    <rect x="22" y="30" width="90" height="56" rx="4" fill="none" stroke="#9aa2a8" stroke-width="2" stroke-dasharray="6 5"/>
+    <text x="67" y="52" font-size="14" fill="var(--sub)" text-anchor="middle">飯店停車場</text>
+    <!-- 入口雨遮 -->
+    <rect x="46" y="84" width="46" height="12" rx="4" fill="#fff" stroke="var(--go-dk)" stroke-width="3"/>
+
+    <!-- 紅綠燈斑馬線（本通り西側） -->
+    <g stroke="#fff" stroke-width="6"><line x1="430" y1="238" x2="454" y2="238"/><line x1="430" y1="248" x2="454" y2="248"/><line x1="430" y1="258" x2="454" y2="258"/><line x1="430" y1="268" x2="454" y2="268"/></g>
+    <g transform="translate(404 278)">
+      <rect x="0" y="0" width="20" height="38" rx="5" fill="#37474f"/>
+      <circle cx="10" cy="11" r="5" fill="#ef5350"/><circle cx="10" cy="27" r="5" fill="#66bb6a"/>
+    </g>
+    <!-- 無號誌斑馬線（ローソン前，不要走） -->
+    <g stroke="#fff" stroke-width="6"><line x1="148" y1="238" x2="172" y2="238"/><line x1="148" y1="248" x2="172" y2="248"/><line x1="148" y1="258" x2="172" y2="258"/><line x1="148" y1="268" x2="172" y2="268"/></g>
+    <circle cx="160" cy="253" r="17" fill="#fff" stroke="var(--no)" stroke-width="4"/>
+    <path d="M151 244 l18 18 M169 244 l-18 18" stroke="var(--no)" stroke-width="5" stroke-linecap="round"/>
+    <text x="140" y="300" font-size="17" font-weight="800" fill="var(--no)">✕ 沒紅綠燈，別在這過</text>
+    <text x="140" y="322" font-size="15" fill="var(--no)">別走 18 號南側再橫越</text>
+
+    <!-- 路線 -->
+    <path d="M452 474 L424 446 L424 372 L442 350 L442 222 L130 222 L130 64 L78 64 L78 76" fill="none" stroke="#fff" stroke-width="20" stroke-linejoin="round"/>
+    <path d="M452 474 L424 446 L424 372 L442 350 L442 222 L130 222 L130 64 L78 64 L78 76" fill="none" stroke="var(--go)" stroke-width="12" stroke-linejoin="round" marker-end="url(#hd2)"/>
+    <g fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M417 412 l7 -7 l7 7"/>
+      <path d="M300 215 l-7 7 l7 7"/>
+      <path d="M123 150 l7 -7 l7 7"/>
+    </g>
+
+    <!-- 文字 -->
+    <text x="232" y="206" font-size="21" font-weight="800" fill="var(--ink)" text-anchor="middle">直走約 300 m</text>
+    <text x="232" y="186" font-size="16" fill="var(--sub)" text-anchor="middle">18 號北側人行道</text>
+    <text x="398" y="400" font-size="19" font-weight="700" fill="var(--ink)" text-anchor="end">沿圓環</text>
+    <text x="398" y="424" font-size="19" font-weight="700" fill="var(--ink)" text-anchor="end">左側往北</text>
+    <text x="398" y="446" font-size="16" fill="var(--sub)" text-anchor="end">約 100 m</text>
+    <text x="400" y="342" font-size="19" font-weight="800" fill="var(--ink)" text-anchor="end">紅綠燈過馬路</text>
+    <text x="164" y="116" font-size="17" fill="var(--sub)">約 50 m</text>
+    <text x="164" y="48" font-size="19" font-weight="800" fill="var(--go-dk)">左轉進停車場</text>
+    <text x="164" y="72" font-size="16" fill="var(--go-dk)">白色弧形雨遮＝入口</text>
+    <text x="164" y="92" font-size="14" fill="var(--check)">（入口位置：需要確認）</text>
+
+    <!-- 起點 -->
+    <rect x="384" y="548" width="150" height="0" fill="none"/>
+    <!-- 節點號碼 -->
+    <g font-size="20" font-weight="800" fill="#fff" text-anchor="middle">
+      <circle cx="452" cy="474" r="17" fill="var(--start)" stroke="#fff" stroke-width="3"/><text x="452" y="481">3</text>
+      <circle cx="442" cy="222" r="17" fill="var(--mid)" stroke="#fff" stroke-width="3"/><text x="442" y="229">4</text>
+      <circle cx="130" cy="222" r="17" fill="var(--mid)" stroke="#fff" stroke-width="3"/><text x="130" y="229">5</text>
+      <circle cx="130" cy="64" r="17" fill="var(--go)" stroke="#fff" stroke-width="3"/><text x="130" y="71">6</text>
+    </g>
+    <text x="474" y="470" font-size="16" font-weight="700" fill="var(--start)">1F 出站</text>
+
+    <!-- 指北 -->
+    <g transform="translate(566 300)">
+      <path d="M0 -22 L9 6 L0 0 L-9 6 z" fill="var(--ink)"/>
+      <text x="0" y="24" font-size="16" font-weight="800" fill="var(--ink)" text-anchor="middle">N</text>
+    </g>
+  </svg>
+
+  <div class="steps">
+    <div class="st"><span class="num" style="background:var(--start)">1</span><div><b>出新幹線改札 → 左轉</b><span>往「北口」指標直走</span></div></div>
+    <div class="st"><span class="num" style="background:var(--mid)">2</span><div><b>北口大門前，搭電扶梯下 1F</b><span>電扶梯在右手（兩段）・電梯在左手・不出 3F 大門</span></div></div>
+    <div class="st"><span class="num" style="background:var(--start)">3</span><div><b>1F 出站，沿圓環左側往北</b><span>背對車站直走約 100 m 到大馬路</span></div></div>
+    <div class="st"><span class="num" style="background:var(--mid)">4</span><div><b>紅綠燈過國道18號 → 左轉</b><span>過到對面（北側）再左轉</span></div></div>
+    <div class="st"><span class="num" style="background:var(--mid)">5</span><div><b>直走約 300 m，ローソン前右轉</b><span>右轉後ローソン在左手邊（23:00 就關，可能沒亮燈）</span></div></div>
+    <div class="st"><span class="num" style="background:var(--go)">6</span><div><b>約 50 m，左手停車場裡＝入口</b><span>灰色水泥外牆・白色弧形雨遮・紅色 ROSSO 旗</span></div></div>
+  </div>
+</div>
+
+<div class="winter">
+  <b>冬天晚上</b>・1 月平均最低氣溫 −8.2℃、平均 9.6 天下雪（氣象廳平年值）。人行道可能結冰或積雪，拖行李走慢一點；巷子沒有人行道，靠邊走。
+</div>
+
+<div class="phh">現場確認</div>
+<div class="card">
+  <div class="ch"><span class="num" style="background:#fff;color:var(--no);border:4px solid var(--no)">✕</span><div><b>看到這座樓梯＝走錯了</b><span>這是北口天橋外的戶外樓梯，拖行李不要走；回 3F 門內搭電扶梯</span></div></div>
+  <svg width="600" height="286" viewBox="0 0 600 286">
+    <image href="photos/crop_x_deck_stairs.jpg" x="0" y="0" width="600" height="286"/>
+    <circle cx="330" cy="215" r="34" fill="#fff" fill-opacity=".9" stroke="var(--no)" stroke-width="5"/><path d="M315 200 l30 30 M345 200 l-30 30" stroke="var(--no)" stroke-width="7" stroke-linecap="round"/>
+  </svg>
+  <div class="cr">照片：663highland / CC BY-SA 4.0 / Wikimedia Commons・已裁切加註・2022/9 拍攝（白天）</div>
+</div>
+<div class="card">
+  <div class="ch"><span class="num" style="background:var(--start);color:#fff">3</span><div><b>出站後的北口圓環</b><span>天橋在頭頂；背對車站往前走，走圓環左側</span></div></div>
+  <svg width="600" height="286" viewBox="0 0 600 286">
+    <image href="photos/crop_p3_north_rotary.jpg" x="0" y="0" width="600" height="286"/>
+    <rect x="160" y="96" width="210" height="40" rx="8" fill="#fff" fill-opacity=".92"/>
+    <text x="174" y="123" font-size="20" font-weight="900" fill="var(--start)">天橋下＝1F 出站處</text>
+    <path d="M265 136 V168" stroke="var(--start)" stroke-width="4"/>
+  </svg>
+  <div class="cr">照片：663highland / CC BY-SA 4.0 / Wikimedia Commons・已裁切加註・2024/3 拍攝（白天，有積雪）<br>拍攝方向：從圓環看向車站（和你走的方向相反）</div>
+</div>
+<div class="card miss">
+  <div class="ch"><span class="num" style="background:var(--go);color:#fff">6</span><div><b>飯店入口</b><span>ローソン北邊那棟灰色 3 層樓</span></div></div>
+  <div class="ph0">
+    <div class="t">缺少照片</div>
+    <div>要找：白色弧形雨遮（邊緣紅色）、紅色 ROSSO 旗，前面是停車場</div>
+    <div class="s">依據：YouTube 影片 q5hguUc8zWg（2023/6）2:09–2:17 的畫面；國土地理院航照看得出停車場在建物北側。</div>
+    <div class="s"><b>需要確認</b>：入口是否面向北側停車場、從巷子進停車場的位置。</div>
+  </div>
+</div>
+
+<div class="check">
+  <b>需要確認</b><br>
+  ・官網寫前台 8:00–23:00，我們約 23:30 才到 → 出發前跟飯店確認深夜怎麼入住、鑰匙怎麼拿<br>
+  ・1F 出站後到圓環左側人行道的確切走法（現場看「国道18号」方向）<br>
+  ・深夜電扶梯有沒有在運轉；沒運轉就搭左手的電梯
+</div>
+
+<div class="lic">本圖以 CC BY-SA 4.0 釋出；照片作者與授權見各照片下方。<br>站內圖依 JR 東日本軽井沢駅構內圖（2024/3）重畫，JR 網站條款禁止轉載原圖。地面路線依 © OpenStreetMap contributors（ODbL）資料重畫。</div>
+</div>
+</body>
+</html>
