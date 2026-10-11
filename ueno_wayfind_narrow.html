@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>上野轉乘導覽</title>
+<style>
+@font-face { font-family: "NotoTC"; src: url("file:///C:/Windows/Fonts/NotoSansTC-VF.ttf"); font-weight: 100 900; }
+:root {
+  --go: #1e8a3c; --go-dk: #146b2c; --no: #d32f2f; --start: #1565c0; --mid: #ef6c00;
+  --ink: #1d2327; --sub: #5b646b; --road: #d8dce0; --bridge: #7d8791; --bldg: #eceef0; --bg: #ffffff;
+  --check: #b26a00; --check-bg: #fff4e0;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+/* 窄版：420 寬、左右 16 → 內容 388；SVG 一律 viewBox 寬＝實際寬（1 單位＝1 CSS px），字級直接可讀 */
+body { width: 420px; background: var(--bg); color: var(--ink); font-family: "NotoTC", "Microsoft JhengHei", sans-serif; }
+.wrap { padding: 20px 16px 18px; text-wrap: pretty; }
+h1 { font-size: 34px; font-weight: 900; line-height: 1.2; letter-spacing: .5px; }
+h1 .nw { white-space: nowrap; }
+h1 .arr { color: var(--go); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.chip { font-size: 20px; font-weight: 700; padding: 4px 12px; border-radius: 8px; background: #eef1f3; }
+.chip.warn { background: var(--no); color: #fff; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 12px; font-size: 18px; color: var(--sub); align-items: center; }
+.legend i { display: inline-block; vertical-align: middle; margin-right: 6px; }
+.panel { margin-top: 20px; border-top: 3px solid var(--ink); padding-top: 10px; }
+.ph { display: flex; align-items: baseline; gap: 10px; }
+.ph b { font-size: 26px; font-weight: 900; white-space: nowrap; }
+.ph span { font-size: 18px; color: var(--sub); }
+svg { display: block; margin-top: 8px; }
+svg text { font-family: "NotoTC", "Microsoft JhengHei", sans-serif; }
+.check { margin-top: 18px; background: var(--check-bg); border-left: 6px solid var(--check); padding: 10px 14px; font-size: 18px; line-height: 1.5; }
+.check b { color: var(--check); }
+.card { margin-top: 14px; border: 2px solid #d5d9dd; border-radius: 12px; overflow: hidden; background: #fff; }
+.card svg { margin-top: 0; }
+.ch { display: flex; gap: 12px; align-items: center; padding: 10px 12px; }
+.ch b { display: block; font-size: 25px; font-weight: 900; line-height: 1.2; }
+.ch span { display: block; font-size: 18px; color: var(--sub); line-height: 1.35; }
+.ch .num { flex: none; width: 40px; height: 40px; border-radius: 50%; color: #fff; font-size: 22px; font-weight: 900; display: flex !important; align-items: center; justify-content: center; }
+.cr { font-size: 15px; color: var(--sub); padding: 6px 12px 8px; line-height: 1.45; }
+.miss .ph0 { margin: 0 12px 12px; border: 3px dashed #9aa2a8; border-radius: 10px; padding: 12px 14px; font-size: 19px; line-height: 1.5; background: #f6f7f8; }
+.miss .t { font-size: 22px; font-weight: 900; color: #6b747b; }
+.miss .s { font-size: 15px; color: var(--sub); margin-top: 4px; }
+.phh { margin-top: 18px; font-size: 20px; font-weight: 900; color: var(--sub); }
+.lic { margin-top: 14px; padding-top: 10px; border-top: 1px solid #d5d9dd; font-size: 16px; color: var(--sub); }
+.sub { font-size: 21px; font-weight: 800; color: var(--sub); word-break: keep-all; }
+#station { margin-top: 30px; }
+#station .panel { margin-top: 10px; }
+.src { margin-top: 12px; font-size: 16px; color: var(--sub); line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="wrap" id="ground">
+
+<h1>京成上野 <span class="arr">→</span> <span class="nw">新幹線 19・20 番線</span></h1>
+<div class="chips">
+  <span class="chip">要出站再進站</span>
+  <span class="chip">地面約 220 m・平面</span>
+  <span class="chip">抓 15 分</span>
+  <span class="chip warn">末班 22:14</span>
+</div>
+
+
+<!-- ============ 總覽：樓層變化 ============ -->
+<div class="panel">
+  <div class="ph"><b>全程樓層</b><span>先上地面，最後搭電梯下到地下 4 樓</span></div>
+  <svg width="388" height="286" viewBox="0 0 388 286">
+    <!-- 樓層導線 -->
+    <g stroke="#c9ced3" stroke-width="2" stroke-dasharray="4 6">
+      <line x1="48" y1="70" x2="388" y2="70"/>
+      <line x1="48" y1="140" x2="118" y2="140"/>
+      <line x1="48" y1="245" x2="388" y2="245"/>
+    </g>
+    <g font-size="20" font-weight="700" fill="var(--sub)">
+      <text x="0" y="77">地面</text><text x="0" y="97" font-size="15" font-weight="400">＝1F</text>
+      <text x="0" y="147">B1</text>
+      <text x="0" y="252">B4</text>
+    </g>
+    <text x="0" y="202" font-size="16" fill="#9aa2a8">B2・B3</text>
+    <text x="0" y="220" font-size="16" fill="#9aa2a8">省略</text>
+    <!-- 區段括號 -->
+    <g stroke="var(--sub)" stroke-width="2" fill="none">
+      <path d="M96 40 v8 M96 44 H197 M197 40 v8"/>
+      <path d="M207 40 v8 M207 44 H302 M302 40 v8"/>
+    </g>
+    <g font-size="16" fill="var(--sub)" text-anchor="middle">
+      <text x="146.5" y="32">室外・約 220 m</text>
+      <text x="254.5" y="32">JR 站內 1F</text>
+    </g>
+    <!-- 路線 -->
+    <path d="M66 140 L96 70 L302 70 L302 245 L352 245" fill="none" stroke="#fff" stroke-width="16" stroke-linejoin="round"/>
+    <path d="M66 140 L96 70 L302 70 L302 245 L352 245" fill="none" stroke="var(--go)" stroke-width="9" stroke-linejoin="round"/>
+    <!-- 節點 -->
+    <g font-size="20" font-weight="800" fill="#fff" text-anchor="middle">
+      <circle cx="66" cy="140" r="16" fill="var(--start)"/><text x="66" y="147">1</text>
+      <circle cx="124" cy="70" r="16" fill="var(--mid)"/><text x="124" y="77">2</text>
+      <circle cx="162" cy="70" r="15" fill="#fff" stroke="var(--no)" stroke-width="4"/><text x="162" y="77" fill="var(--no)">3</text>
+      <circle cx="202" cy="70" r="16" fill="var(--go)"/><text x="202" y="77">4</text>
+      <circle cx="240" cy="70" r="16" fill="var(--mid)"/><text x="240" y="77">5</text>
+      <circle cx="276" cy="70" r="16" fill="var(--mid)"/><text x="276" y="77">6</text>
+      <circle cx="302" cy="154" r="16" fill="var(--go-dk)"/><text x="302" y="161">7</text>
+    </g>
+    <!-- 標籤兩排錯開：窄版放不下一排 -->
+    <g font-size="18" text-anchor="middle">
+      <text x="66" y="175" fill="var(--ink)">京成改札</text>
+      <text x="162" y="102" fill="var(--no)" font-weight="700">不忍口</text>
+      <text x="202" y="125" fill="var(--go-dk)" font-weight="700">広小路口</text>
+      <text x="254" y="102" fill="var(--ink)">兩道閘門</text>
+    </g>
+    <text x="324" y="160" font-size="20" font-weight="700" fill="var(--go-dk)">G 電梯</text>
+    <text x="324" y="184" font-size="18" fill="var(--sub)">直達 B4</text>
+    <!-- 終點 -->
+    <g transform="translate(352 245)">
+      <circle r="11" fill="var(--go-dk)"/><circle r="5" fill="#fff"/>
+    </g>
+    <text x="386" y="276" font-size="20" font-weight="800" fill="var(--go-dk)" text-anchor="end">19・20 番線</text>
+  </svg>
+</div>
+
+<!-- ============ ① 地面段 ============ -->
+<div class="panel">
+  <div class="ph"><b>地面：步驟 1–4</b><span>從 ① 起上方＝前進方向，不照比例</span></div>
+  <!-- 窄版：地物幾何沿用原圖、水平方向壓成 0.62 倍（仿射，左右／前後關係不變），文字 1:1 重新擺位 -->
+  <svg width="388" height="740" viewBox="0 0 388 740">
+    <defs>
+      <marker id="hd" viewBox="0 0 10 10" refX="4" refY="5" markerUnits="userSpaceOnUse" markerWidth="24" markerHeight="24" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--go)"/></marker>
+    </defs>
+    <!-- 中央通り：前段在右手邊，路口後跟著往右彎進鐵橋下（裁到圖框內） -->
+    <polygon points="388.0 275.7 388.0 167.4 220.5 489.4 218.4 495.0 217.7 500.9 217.7 740.0 267.7 740.0 267.7 507.0" fill="var(--road)"/>
+    <!-- 岔路（往北），斑馬線跨過它 -->
+    <path d="M229.1 489.1 L211.1 372.7" stroke="var(--road)" stroke-width="34" stroke-linecap="round"/>
+    <g stroke="#fff" stroke-width="7"><line x1="213.5" y1="468.4" x2="232.7" y2="431.6"/><line x1="210.9" y1="451.4" x2="230.1" y2="414.6"/><line x1="205.7" y1="418.4" x2="224.9" y2="381.6"/><line x1="203.1" y1="401.4" x2="222.3" y2="364.6"/></g>
+    <!-- JR 上野站建物 -->
+    <polygon points="204.4 345.9 115.1 225.0 246.6 -27.8 335.9 93.1" fill="var(--bldg)" stroke="#cfd4d8" stroke-width="2"/>
+    <!-- 鐵橋（窄版加寬，放得下「JR 鐵橋」） -->
+    <polygon points="263.0 400.1 118.2 204.1 186.1 158.1 330.9 354.1" fill="var(--bridge)" opacity=".9"/>
+    <text x="192" y="244" font-size="21" font-weight="800" fill="#fff" text-anchor="middle">JR 鐵橋</text>
+    <line x1="225.9" y1="304.5" x2="238.7" y2="280.0" stroke="var(--no)" stroke-width="9"/>
+    <line x1="313.6" y1="136.0" x2="326.3" y2="111.5" stroke="var(--go)" stroke-width="9"/>
+    <!-- 紅綠燈 -->
+    <g transform="translate(244 418)">
+      <rect x="0" y="0" width="22" height="42" rx="6" fill="#37474f"/>
+      <circle cx="11" cy="12" r="6" fill="#ef5350"/><circle cx="11" cy="30" r="6" fill="#66bb6a"/>
+    </g>
+    <text x="242.7" y="522" font-size="22" font-weight="700" fill="var(--sub)" style="writing-mode: vertical-rl">中央通り（不用過）</text>
+
+    <!-- 走錯的救援路 -->
+    <path d="M232.3 292.3 C 238.4 222, 283 164, 320 123.7" fill="none" stroke="#8a949c" stroke-width="3" stroke-dasharray="6 6"/>
+
+    <!-- 不忍口（錯） -->
+    <rect x="16" y="265" width="202" height="54" rx="8" fill="#fff" stroke="var(--no)" stroke-width="4"/>
+    <g stroke="var(--no)" stroke-width="5" stroke-linecap="round"><path d="M26 281 l20 22 M46 281 l-20 22"/></g>
+    <text x="54" y="301" font-size="25" font-weight="900" fill="var(--no)">不忍口 不要進</text>
+    <path d="M218 292 H229" stroke="var(--no)" stroke-width="3"/>
+    <text x="16" y="344" font-size="18" fill="var(--no)">也別搭這裡往上的電扶梯</text>
+    <text x="16" y="368" font-size="18" fill="var(--sub)">走錯了：1F 通道可走回</text>
+
+    <!-- 広小路口（對） -->
+    <rect x="132" y="84" width="174" height="72" rx="10" fill="var(--go)"/>
+    <path d="M146 120 l9 10 l18 -22" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="182" y="120" font-size="28" font-weight="900" fill="#fff">広小路口</text>
+    <text x="182" y="146" font-size="18" font-weight="700" fill="#fff">從這裡進站</text>
+
+    <!-- 相隔 67 m -->
+    <g stroke="var(--sub)" stroke-width="2"><path d="M283.1 361.0 L370.8 192.5 M276.9 357.8 l12.4 6.4 M364.6 189.3 l12.4 6.4"/></g>
+    <text x="338" y="287" font-size="18" fill="var(--ink)">相隔</text>
+    <text x="338" y="309" font-size="18" font-weight="700" fill="var(--ink)">67 m</text>
+
+    <!-- 路線 -->
+    <path d="M176 690 H190 V470 L349.4 163.6 L333.4 142" fill="none" stroke="#fff" stroke-width="20" stroke-linejoin="round"/>
+    <path d="M176 690 H190 V470 L349.4 163.6 L333.4 142" fill="none" stroke="var(--go)" stroke-width="12" stroke-linejoin="round" marker-end="url(#hd)"/>
+    <g fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M183 575 l7 -7 l7 7"/>
+      <path d="M300.4 247.8 l7 -7 l7 7" transform="rotate(27.5 307.4 244.3)"/>
+    </g>
+
+    <!-- 起點 -->
+    <text x="16" y="620" font-size="18" fill="var(--start)" font-weight="700">B1 改札左轉，</text>
+    <text x="16" y="642" font-size="18" fill="var(--start)" font-weight="700">搭電扶梯上來</text>
+    <rect x="16" y="652" width="154" height="80" rx="10" fill="var(--start)"/>
+    <rect x="168" y="674" width="10" height="32" fill="var(--start)"/>
+    <text x="30" y="686" font-size="25" font-weight="900" fill="#fff">京成正面口</text>
+    <text x="30" y="717" font-size="19" font-weight="700" fill="#fff">出來就左轉</text>
+    <text x="172" y="545" font-size="21" font-weight="700" fill="var(--ink)" text-anchor="end">直走</text>
+    <text x="172" y="570" font-size="21" font-weight="700" fill="var(--ink)" text-anchor="end">約100 m</text>
+    <!-- 斑馬線文字 -->
+    <text x="16" y="428" font-size="23" font-weight="800" fill="var(--ink)">過紅綠燈斑馬線</text>
+    <text x="16" y="454" font-size="18" fill="var(--ink)">往右前方過馬路</text>
+
+    <!-- 節點號碼 -->
+    <g font-size="20" font-weight="800" fill="#fff" text-anchor="middle">
+      <circle cx="190" cy="650" r="17" fill="var(--start)" stroke="#fff" stroke-width="3"/><text x="190" y="657">1</text>
+      <circle cx="217.9" cy="416.4" r="17" fill="var(--mid)" stroke="#fff" stroke-width="3"/><text x="217.9" y="423.4">2</text>
+      <circle cx="261.7" cy="332.1" r="16" fill="#fff" stroke="var(--no)" stroke-width="5"/><text x="261.7" y="339.1" fill="var(--no)">3</text>
+      <circle cx="349.4" cy="163.6" r="17" fill="var(--go)" stroke="#fff" stroke-width="3"/><text x="349.4" y="170.6">4</text>
+    </g>
+  </svg>
+</div>
+
+<div class="phh">現場確認：③ ④</div>
+<div class="card">
+  <div class="ch"><span class="num" style="background:#fff;color:var(--no);border:4px solid var(--no)">3</span><div><b>這個入口不要進</b><span>招牌「上野駅 不忍口」在鐵橋下，繼續直走</span></div></div>
+  <svg width="384" height="183" viewBox="0 0 384 183">
+    <image href="photos/crop_p3_shinobazu.jpg" x="0" y="0" width="384" height="183"/>
+    <circle cx="218.9" cy="118.4" r="23.8" fill="#fff" fill-opacity=".9" stroke="var(--no)" stroke-width="4"/><path d="M208.4 107.9 l21 21 M229.4 107.9 l-21 21" stroke="var(--no)" stroke-width="5.6" stroke-linecap="round"/><rect x="112" y="51.2" width="151" height="23" rx="4.8" fill="none" stroke="var(--no)" stroke-width="2.4"/>
+  </svg>
+  <div class="cr">照片：Nesnad / CC BY 4.0 / Wikimedia Commons・已裁切加註・2019/5 拍攝</div>
+</div>
+<div class="card">
+  <div class="ch"><span class="num" style="background:var(--go);color:#fff">4</span><div><b>從這個入口進</b><span>時鐘建築，屋簷下小招牌「広小路口」</span></div></div>
+  <svg width="384" height="154" viewBox="0 0 384 154">
+    <image href="photos/crop_p4_hirokoji.jpg" x="0" y="0" width="384" height="154"/>
+    <path d="M146.6 152.3 V117.1" stroke="#fff" stroke-width="11.2" stroke-linecap="round"/><path d="M146.6 152.3 V117.1" stroke="var(--go)" stroke-width="6.4" stroke-linecap="round"/><path d="M136.3 119.7 L146.6 108.2 L156.8 119.7 z" fill="var(--go)" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/><rect x="137" y="69.1" width="38.4" height="12.8" rx="3.2" fill="none" stroke="var(--go)" stroke-width="2.4"/>
+  </svg>
+  <div class="cr">照片：MaedaAkihiko / CC BY-SA 4.0 / Wikimedia Commons・已裁切加註・2020/8 拍攝<br>⚠ 2023/11 另一張照片（Nesnad / CC BY 4.0）拍到站前廣場有施工圍籬，現場外觀可能和這張不同</div>
+</div>
+
+<div class="lic">本圖以 CC BY-SA 4.0 釋出；照片作者與授權見各照片下方。<br>地面路線依 © OpenStreetMap contributors（ODbL）資料與 wadattsu261.com 文字導覽重畫。</div>
+</div>
+
+<div class="wrap" id="station">
+<div class="sub">上野轉乘（2/2）：進広小路口後，到新幹線 19・20 番線</div>
+<!-- ============ ② 站內段 ============ -->
+<div class="panel">
+  <div class="ph"><b>站內：步驟 5–7</b><span>上方＝前進方向・依 JR 構內圖重畫</span></div>
+  <!-- 窄版：兩欄（起點／⑤ 在左欄 x160、⑥⑦ 在右欄 x280），高度加長；相對位置照原圖 -->
+  <svg width="388" height="615" viewBox="0 0 388 615">
+    <defs>
+      <marker id="hd2" viewBox="0 0 10 10" refX="4" refY="5" markerUnits="userSpaceOnUse" markerWidth="24" markerHeight="24" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--go)"/></marker>
+    </defs>
+    <rect x="0" y="0" width="388" height="615" rx="12" fill="#f6f7f8"/>
+    <!-- 中央改札 閘門 -->
+    <g fill="#90a4ae"><rect x="56" y="447" width="12" height="26" rx="3"/><rect x="88" y="447" width="12" height="26" rx="3"/><rect x="120" y="447" width="12" height="26" rx="3"/><rect x="184" y="447" width="12" height="26" rx="3"/><rect x="216" y="447" width="12" height="26" rx="3"/></g>
+    <text x="260" y="469" font-size="26" font-weight="900" fill="var(--ink)">中央改札</text>
+    <text x="260" y="495" font-size="18" fill="var(--sub)">刷票進閘</text>
+
+    <!-- 指標柱 -->
+    <text x="16" y="314" font-size="18" fill="var(--sub)">過閘後找這個指標</text>
+    <path d="M195 360 L188 408" stroke="var(--ink)" stroke-width="2" stroke-dasharray="4 4"/>
+    <rect x="16" y="324" width="179" height="44" rx="6" fill="#fff" stroke="var(--ink)" stroke-width="3"/>
+    <text x="105.5" y="354" font-size="22" font-weight="800" fill="var(--ink)" text-anchor="middle">↑新幹線 19－22</text>
+
+    <!-- のりかえ口 閘門 -->
+    <g fill="#90a4ae"><rect x="226" y="236" width="12" height="28" rx="3"/><rect x="250" y="236" width="12" height="28" rx="3"/><rect x="298" y="236" width="12" height="28" rx="3"/><rect x="322" y="236" width="12" height="28" rx="3"/></g>
+    <text x="218" y="258" font-size="24" font-weight="900" fill="var(--ink)" text-anchor="end">新幹線のりかえ口</text>
+    <text x="218" y="283" font-size="18" fill="var(--sub)" text-anchor="end">再刷一次票</text>
+
+    <!-- 右斜前方 / 經過窗口 -->
+    <text x="222" y="425" font-size="22" font-weight="800" fill="var(--mid)">右斜前方</text>
+    <text x="280" y="345" font-size="17" fill="var(--sub)">途中有</text>
+    <text x="280" y="366" font-size="17" fill="var(--sub)">みどりの窓口</text>
+    <!-- 直走到底 -->
+    <text x="302" y="158" font-size="21" font-weight="700" fill="var(--ink)">直走到底</text>
+    <text x="302" y="182" font-size="17" fill="var(--sub)">快到底時</text>
+    <text x="302" y="203" font-size="17" fill="var(--sub)">往左邊進去</text>
+
+    <!-- 路線 -->
+    <path d="M160 605 V460 L280 281 V102 H238.4" fill="none" stroke="#fff" stroke-width="20" stroke-linejoin="round"/>
+    <path d="M160 605 V460 L280 281 V102 H238.4" fill="none" stroke="var(--go)" stroke-width="12" stroke-linejoin="round" marker-end="url(#hd2)"/>
+    <g fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M153 545 l7 -7 l7 7"/><path d="M273 191 l7 -7 l7 7"/>
+    </g>
+
+    <!-- 起點：広小路口 -->
+    <rect x="16" y="555" width="130" height="44" rx="8" fill="var(--go)"/>
+    <text x="81" y="585" font-size="22" font-weight="800" fill="#fff" text-anchor="middle">広小路口</text>
+    <text x="180" y="585" font-size="18" fill="var(--sub)">進來直走</text>
+
+    <!-- G 電梯 -->
+    <rect x="168" y="60" width="64" height="84" rx="10" fill="#fff" stroke="var(--go-dk)" stroke-width="4"/>
+    <text x="200" y="104" font-size="34" font-weight="900" fill="var(--go-dk)" text-anchor="middle">G</text>
+    <path d="M188 116 l12 -10 l12 10 z M188 124 l12 10 l12 -10 z" fill="var(--go-dk)"/>
+    <text x="200" y="52" font-size="20" font-weight="800" fill="var(--go-dk)" text-anchor="middle">電梯</text>
+
+    <!-- 終點（窄版「19・20 番線」折兩行） -->
+    <rect x="12" y="16" width="148" height="156" rx="12" fill="var(--go-dk)"/>
+    <text x="24" y="48" font-size="20" font-weight="700" fill="#fff">搭到 地下4樓</text>
+    <text font-size="32" font-weight="900" fill="#fff"><tspan x="24" y="90">19・20</tspan>
+      <tspan x="24" y="128">番線</tspan></text>
+    <text x="24" y="160" font-size="18" fill="#e3f2e7">あさま 往輕井澤</text>
+    <path d="M160 102 h8" stroke="var(--go-dk)" stroke-width="4"/>
+
+    <!-- 節點號碼 -->
+    <g font-size="20" font-weight="800" fill="#fff" text-anchor="middle">
+      <circle cx="160" cy="460" r="17" fill="var(--mid)" stroke="#fff" stroke-width="3"/><text x="160" y="467">5</text>
+      <circle cx="280" cy="250" r="17" fill="var(--mid)" stroke="#fff" stroke-width="3"/><text x="280" y="257">6</text>
+      <circle cx="280" cy="102" r="17" fill="var(--go-dk)" stroke="#fff" stroke-width="3"/><text x="280" y="109">7</text>
+    </g>
+  </svg>
+</div>
+
+<div class="phh">現場確認：⑤ ⑥ ⑦</div>
+<div class="card">
+  <div class="ch"><span class="num" style="background:var(--mid);color:#fff">5</span><div><b>刷票進中央改札</b><span>閘門上方右側有「新幹線 ↗」，過閘往右前方</span></div></div>
+  <svg width="384" height="132" viewBox="0 0 384 132">
+    <image href="photos/crop_p5_central.jpg" x="0" y="0" width="384" height="132"/>
+    <rect x="245.1" y="12.2" width="92.2" height="17.9" rx="4.8" fill="none" stroke="var(--mid)" stroke-width="3.2"/><path d="M192 131.8 V99.8" stroke="#fff" stroke-width="11.2" stroke-linecap="round"/><path d="M192 131.8 V99.8" stroke="var(--go)" stroke-width="6.4" stroke-linecap="round"/><path d="M181.8 102.4 L192 90.9 L202.2 102.4 z" fill="var(--go)" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/>
+  </svg>
+  <div class="cr">照片：MaedaAkihiko / CC BY-SA 4.0 / Wikimedia Commons・已裁切加註・2021/8 拍攝</div>
+</div>
+<div class="card">
+  <div class="ch"><span class="num" style="background:var(--mid);color:#fff">6</span><div><b>再過這個閘門</b><span>上方寫「新幹線のりかえ口」</span></div></div>
+  <svg width="384" height="154" viewBox="0 0 384 154">
+    <image href="photos/crop_p5b_transfer.jpg" x="0" y="0" width="384" height="154"/>
+    <path d="M177.9 153.6 V130.6" stroke="#fff" stroke-width="11.2" stroke-linecap="round"/><path d="M177.9 153.6 V130.6" stroke="var(--go)" stroke-width="6.4" stroke-linecap="round"/><path d="M167.7 133.1 L177.9 121.6 L188.2 133.1 z" fill="var(--go)" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/><rect x="9.6" y="5.8" width="148.5" height="16.6" rx="4" fill="none" stroke="var(--go)" stroke-width="2.4"/>
+  </svg>
+  <div class="cr">照片：MaedaAkihiko / CC0 / Wikimedia Commons・已裁切加註・2024/4 拍攝<br>照片 21:11 拍，看板上 22:14 あさま633 是 19 番線（當天）；2027/1 以現場看板為準</div>
+</div>
+<div class="card miss">
+  <div class="ch"><span class="num" style="background:var(--go-dk);color:#fff">7</span><div><b>搭 G 電梯到 B4</b><span>過のりかえ口直走到通道底，左側</span></div></div>
+  <div class="ph0">
+    <div class="t">缺少照片</div>
+    <div>要找：寫「エレベーター」的電梯標示，編號 G</div>
+    <div class="s">出處：JR 東日本上野駅構內圖（2026/6）圖例「Gエレベーター：(1F)中央改札⇔新幹線ホーム」；wadattsu 文字「突き当り手前あたりで左奥」。<br>電扶梯走法見影片 fBYF-NrFQsM 7:44</div>
+    <div class="s"><b>需要確認</b>：G 在通道裡的確切位置、外觀。</div>
+    <div class="s">找不到 G 電梯：通道底左轉搭電扶梯，經地下 3 樓大廳下到 19・20 番線</div>
+  </div>
+</div>
+
+<div class="check">
+  <b>需要確認</b>・站內距離與方位是示意，現場以「新幹線」「エレベーター」指標為準
+</div>
+<div class="src">
+  站內圖依 JR 東日本上野駅構內圖（2026/6）重畫；JR 網站條款禁止轉載原圖。地面依 OSM 與 wadattsu261.com 文字導覽。
+</div>
+
+<div class="lic">本圖以 CC BY-SA 4.0 釋出；照片作者與授權見各照片下方。</div>
+</div>
+</body>
+</html>
